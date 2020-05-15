@@ -1,10 +1,8 @@
 <?php get_header(); ?>
 
-<section class="page-wrap  container m-auto mt-5">
-    <h1 class="ml-3 my-5"> <?php the_title(); ?>   </h1>
+<section class="page-wrap mt-5">
 <div class="container row">
-
-  <div class="col mt-5">
+  <div class="">
     <?php if(has_post_thumbnail()): ?>
         <!-- This has a featured image -->
         <div>
@@ -13,8 +11,8 @@
     <?php endif; ?>
    </div>
 
-    <div class="col bg-ligiht text-dark">
-
+    <div class="">
+      <h1> <?php the_title(); ?>   </h1>
       <?php get_template_part('includes/section','blogcontent'); ?>
          <?php wp_link_pages(); ?>
     </div>

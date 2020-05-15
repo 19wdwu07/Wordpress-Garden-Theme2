@@ -13,8 +13,9 @@
 
   copyright@2020
 
-  <p>facebook </p> <p>twitter </p>
-
+  <div class="py-3 row">
+  <p class="col"> facebook </p> <p class="col">twitter </p>
+  </div>
 </footer>
 
 <?php wp_footer(); ?>

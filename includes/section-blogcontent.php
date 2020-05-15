@@ -1,4 +1,4 @@
-<div class="bg-light">
+<div class="bg-light mt-5 text-dark ">
 <?php
 if (have_posts()) :
   while (have_posts()):
@@ -6,7 +6,7 @@ if (have_posts()) :
 ?>
 
 <p class="text-dark">
-<?php  echo get_the_date('l, h:i:s d/m/Y'); //check php date format ?>
+<?php  //echo get_the_date('l, h:i:s d/m/Y'); //check php date format ?>
 </p>
 
 
@@ -23,7 +23,7 @@ if (have_posts()) :
   <?php
     $tags = get_the_tags();
     ?>
-      <p class="text-danger"> Tags:
+      <p class="text-danger "> Tags:
         <?php
         echo ' ';
     if($tags):

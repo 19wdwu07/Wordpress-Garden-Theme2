@@ -6,5 +6,24 @@
     <?php wp_head(); ?><!-- notice the wordpress admin bar on top-->
   </head>
   <body>
-  
-     Secondary header
+
+
+    <header class="container bg-light">
+
+      <!-- logo -->
+
+      <div class=" bg-info">
+      <?php
+      wp_nav_menu(
+        array(
+        'theme_location' => 'top-menu',
+       //  'menu' => 'Top Bar',
+        'menu_class' => 'top-bar'
+        )
+      );
+      // call to action button
+      //add a cart
+
+      ?>
+    </div>
+    </header>

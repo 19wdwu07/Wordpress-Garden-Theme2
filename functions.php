@@ -3,7 +3,7 @@
 
 //load stylesheets
 function load_css(){
-  wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), false, 'all');
+  wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.5.0', 'all');
   wp_enqueue_style('bootstrap');
 
   //your own css must be last
@@ -17,10 +17,14 @@ add_action('wp_enqueue_scripts','load_css');
 //load javascript
 function load_js()
 {
+
 		wp_enqueue_script('jquery');
 
-		wp_register_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', 'jquery', false, true);
+		wp_register_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), '4.5.0', true);
 		wp_enqueue_script('bootstrap');
+
+    wp_register_script('js', get_template_directory_uri() . '/js/script.js', array('jquery'), false, true);
+		wp_enqueue_script('js');
 
 
 }
@@ -78,16 +82,18 @@ function my_first_post_type(){
         'name' => 'Plants',
         'singular_name' => 'Plant',
     ),
-  'hierarchical' => true, //booleans value toggles between pages & posts without labels
-  'menu_icon' => 'dashicons-palmtree',
+
+  'hierarchical' => true, //boolean value toggles between pages & posts without labels
+  'menu_icon' => 'dashicons-palmtree',//get icon name from wordpress dashicons
   'public' => true,
   'has_archive' => true,
-  'supports' => array('title', 'editor', 'thumbnail','custom-fields'),// if one of the argument is  not mentioned,
+  'supports' => array('title','editor','thumbnail','custom-fields' ),// if one of the argument is  not mentioned,
   //if makes difference in features
 
 );
   register_post_type('plants',$args);
 }
+
 add_action('init','my_first_post_type');
 
 

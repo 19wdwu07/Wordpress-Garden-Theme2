@@ -4,12 +4,13 @@ if (have_posts()) :
   while (have_posts()):
     the_post();
   ?>
-    <!-- <div class="card  mb-3 ">
-      <div class="card-body"> -->
+  <div class="row">
+    <div class="card col-lg-9 mt-5 mb-3">
+      <div class="card-body">
 
         <!-- featured image -->
         <?php if(has_post_thumbnail()): ?>
-            This has a featured image
+            <!-- This has a featured image -->
             <div>
               <img src="<?php the_post_thumbnail_url('blog-small'); ?>" alt="<?php the_title(); ?>" class="mb-3 img-fluid img-thumbnail">
             </div>
@@ -22,11 +23,21 @@ if (have_posts()) :
     ?>
 
     <a href="<?php the_permalink(); ?>" class="text-dark"> Read more </a>
-  <!-- </div>
-</div> -->
+  </div>
+</div>
+
+
   <?php endwhile;
  else:
 endif;
 
 ?>
+
+<div class="col-lg-3 widget">
+
+  <?php if(is_active_sidebar('blog-sidebar')) :?>
+    <?php dynamic_sidebar('blog-sidebar'); ?>
+
+  <?php endif; ?>
+</div>
 </div>

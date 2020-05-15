@@ -1,4 +1,4 @@
-<div class="bg-light">
+
 <?php
 if (have_posts()) :
   while (have_posts()):
@@ -9,4 +9,3 @@ if (have_posts()) :
 endif;
 
 ?>
-</div>

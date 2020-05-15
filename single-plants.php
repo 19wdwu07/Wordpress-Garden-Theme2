@@ -28,6 +28,7 @@
            <li> Category: <?php the_field('category'); ?> </li>
 
            <li> Botanical Name: <?php the_field('botanicalname'); ?> </li>
+          <li> Season when it grows: <?php the_field('season'); ?> </li>
 
          </ul>
 
