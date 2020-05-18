@@ -116,3 +116,28 @@ function my_first_taxonomy(){
 }
 
 add_action('init', 'my_first_taxonomy');
+
+//header image
+
+register_default_headers( array(
+    'defaultImage' => array(
+        'url'           => get_template_directory_uri() . '/images/background-image.jpeg',
+        'thumbnail_url' => get_template_directory_uri() . '/images/background-image.jpeg',
+        'description'   => __( 'The default image for the custom header.', 'gardenTheme' )
+    )
+) );
+
+$customHeaderDefaults = array(
+    'width' => 1280,
+    'height' => 720,
+    'default-image' => get_template_directory_uri() . '/images/background-image.jpeg'
+);
+add_theme_support('custom-header', $customHeaderDefaults);
+
+
+
+
+
+
+//customize API
+require_once get_template_directory() . '/customizer.php';

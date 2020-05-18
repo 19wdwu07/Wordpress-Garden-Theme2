@@ -1,4 +1,4 @@
-<footer class="bg-dark text-info jumbotron container">
+<footer class="text-info myTheme jumbotron ">
   <div class="container">
   <?php
   // wp_nav_menu(
@@ -10,11 +10,11 @@
   // );
   ?>
 </div>
+ <p class="footerText"><?php echo get_theme_mod('garden_footerMessage'); ?></p>
 
-  copyright@2020
 
   <div class="py-3 row">
-  <p class="col"> facebook </p> <p class="col">twitter </p>
+  <p class="col footerText"> facebook </p> <p class="col">twitter </p>
   </div>
 </footer>
 

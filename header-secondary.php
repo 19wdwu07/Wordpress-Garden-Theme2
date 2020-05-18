@@ -8,7 +8,7 @@
   <body>
 
 
-    <header class="container bg-light">
+    <header class="container">
 
       <!-- logo -->
 
