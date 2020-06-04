@@ -1,11 +1,14 @@
-<div class="bg-light">
+<div class="row">
 <?php
-if (have_posts()) :
+if (have_posts()) : ?>
+  <div class="col-lg-9">
+    <?php
   while (have_posts()):
     the_post();
   ?>
-  <div class="row">
-    <div class="card col-lg-9 mt-5 mb-3">
+
+
+    <div class="card mt-5 mb-3">
       <div class="card-body">
 
         <!-- featured image -->
@@ -23,17 +26,21 @@ if (have_posts()) :
     ?>
 
     <a href="<?php the_permalink(); ?>" class="text-dark"> Read more </a>
-  </div>
+  </div> <!--card-body-->
+
+</div> <!--card-->
+
+
+
+<?php endwhile;?>
 </div>
-
-
-  <?php endwhile;
+<?php
  else:
 endif;
 
 ?>
 
-<div class="col-lg-3 widget">
+<div class="col-lg-3">
 
   <?php if(is_active_sidebar('blog-sidebar')) :?>
     <?php dynamic_sidebar('blog-sidebar'); ?>

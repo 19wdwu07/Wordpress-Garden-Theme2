@@ -14,7 +14,9 @@
 
 
   <div class="py-3 row">
-  <p class="col footerText"> facebook </p> <p class="col">twitter </p>
+    <img class="col footerText facebook" src="<?php echo get_theme_mod('garden_footerIcon'); ?>" alt="facebook" />
+    <p class="col">twitter </p>
+    <a href="https://skillcrush.com/blog/free-portfolio-templates/" > Developer </a>
   </div>
 </footer>
 

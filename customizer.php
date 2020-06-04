@@ -68,24 +68,23 @@ function mytheme_customize_register( $wp_customize ) {
      'settings'   => 'garden_siteTitleText',
    ) ) );
 
-   // header image
+   // footer icon image
 
-   $wp_customize->add_section( 'garden_frontPageImage' , array(
-      'title'      => __( 'Front Page Header Image', 'gardenTheme' ),
-      'priority'   => 30,
+   $wp_customize->add_section( 'garden_footerIconImage' , array(
+      'title'      => __( 'Footer Icon Image', 'gardenTheme' ),
+      'priority'   => 45,
   ) );
 
-  $wp_customize->add_setting( 'garden_frontPageImageSetting' , array(
-      'default'   => '',
+  $wp_customize->add_setting( 'garden_footerIcon' , array(
+      'default'   => get_template_directory_uri() . 'images/facebook.png',
       'transport' => 'refresh',
   ) );
 
-  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'garden_frontPageImageControl', array(
-    'label'      => __( 'Front Page Header Image', 'gardenTheme' ),
-    'section'    => 'garden_frontPageImage',
-    'settings'   => 'garden_frontPageImageSetting',
+  $wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'garden_footerIconImageControl', array(
+    'label'      => __( 'Footer Icon Image', 'gardenTheme' ),
+    'section'    => 'garden_footerIconImage',
+    'settings'   => 'garden_footerIcon',
   ) ) );
-
 
 
 

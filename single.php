@@ -13,7 +13,7 @@
     <?php endif; ?>
    </div>
 
-    <div class="col bg-ligiht text-dark">
+    <div class="col bg-light text-dark">
 
       <?php get_template_part('includes/section','blogcontent'); ?>
          <?php wp_link_pages(); ?>

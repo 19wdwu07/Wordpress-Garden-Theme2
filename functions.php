@@ -3,7 +3,9 @@
 
 //load stylesheets
 function load_css(){
-  wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.5.0', 'all');
+
+  //wp_register_style('bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.5.0', 'all');
+
   wp_enqueue_style('bootstrap');
 
   //your own css must be last
@@ -46,6 +48,11 @@ register_nav_menus(
 
 
 );
+//Bootstrap nav walker
+function register_navwalker(){
+	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
+}
+add_action( 'after_setup_theme', 'register_navwalker' );
 
 //custom image size
 add_image_size('blog-large', 800, 400, false);
@@ -127,9 +134,10 @@ register_default_headers( array(
     )
 ) );
 
+//Header Image
 $customHeaderDefaults = array(
-    'width' => 1280,
-    'height' => 720,
+    'width' => 400,
+    'height' => 533,
     'default-image' => get_template_directory_uri() . '/images/background-image.jpeg'
 );
 add_theme_support('custom-header', $customHeaderDefaults);
@@ -141,3 +149,6 @@ add_theme_support('custom-header', $customHeaderDefaults);
 
 //customize API
 require_once get_template_directory() . '/customizer.php';
+
+
+remove_action('wp_head', 'wp_generator'); //for security. it wont show what version of wp is used.

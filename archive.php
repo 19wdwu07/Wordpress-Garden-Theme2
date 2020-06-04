@@ -4,7 +4,7 @@
 <div class="container">
 
 
-  <section class="row">
+  <section class="row ">
 
     <div class="col-lg-9">
 

@@ -7,8 +7,8 @@ Template Name: MyAccount
 
 <?php get_header(); ?>
 
-
-<section class="page-wrap">
+<!--
+<section class="page-wrap">-->
 <div class="container">
 
   <section class="row">
@@ -42,5 +42,5 @@ Template Name: MyAccount
 
 </section>
 
-
+</div>
 <?php get_footer(); ?>
